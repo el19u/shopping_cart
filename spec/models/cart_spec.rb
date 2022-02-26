@@ -28,8 +28,8 @@ RSpec.describe Cart, type: :model do
      2.times{ cart.add_item(p2.id) }
 
      expect(cart.items.first.product_id).to be p1.id
-     expect(cart.items.first.product_id).to be p2.id
-     expect(cart.items.first.product_id).to be_a Product
+     expect(cart.items.second.product_id).to be p2.id
+     expect(cart.items.first.product).to be_a Product
    end
    it "Cart total"
    it "Seasonal Discount"
